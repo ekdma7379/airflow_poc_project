@@ -1,0 +1,77 @@
+<KtrRequestReport>
+	<header>
+		<version>(버전)</version>
+		<memberId>(회원ID)</memberId>
+		<submissionDate>(제출일자)</submissionDate>
+		<messageClassificationId>(전문분류ID)</messageClassificationId>
+		<localeCode>(로케일구분코드)</localeCode>
+		<reportingMethodCode>(작성방식)</reportingMethodCode>
+		<reportingAccountNo>(보고용계좌번호)</reportingAccountNo>
+		<reportingReferenceCode>(보고참조코드)</reportingReferenceCode>
+	</header>
+	<TradeValuationItem>
+		<trade>
+			<agreementDate>(계약변경일)</agreementDate>
+			<earlyTerminationDate>(조기종료일)</earlyTerminationDate>
+			<TradeHeader>
+				<PartyTradeIdentifier>
+					<tradeId>(고유거래식별기호)</tradeId>
+				</PartyTradeIdentifier>
+				<PartyTradeInformation>
+					<ReportingRegime>
+						<SupervisoryRegistration>
+							<supervisorBody>KRX-TR</supervisorBody>
+						</SupervisoryRegistration>
+						<reportingPurpose>T(거래정보유형)</reportingPurpose>
+						<actionType>(입력유형)</actionType>
+					</ReportingRegime>
+					<RelatedParty>
+						<PartyReference href="TradeParty2" />
+						<role>Counterparty</role>
+					</RelatedParty>
+					<RelatedParty>
+						<PartyReference href="TradeParty1" />
+						<role>ContractualParty</role>
+					</RelatedParty>
+					<RelatedParty>
+						<PartyReference href="DataSubmitter" />
+						<role>DataSubmitter</role>
+					</RelatedParty>
+					<category1>(고유/신탁구분)</category1>
+				</PartyTradeInformation>
+			</TradeHeader>
+		</trade>
+		<ValuationSet>
+			<AssetValuation>
+				<Quote>
+					<value>(평가가치)</value>
+					<currency>(가치평가통화)</currency>
+					<valuationDate>(가치평가일)</valuationDate>
+					<valuationMethod>(가치평가방법)</valuationMethod>
+				</Quote>
+			</AssetValuation>
+		</ValuationSet>
+		<ValuationCFD>
+			<Buy>
+				<amount>(당일 매수금액)</amount>
+				<quantity>(당일 매수수량)</quantity>
+				<price>(당일 가중평균 매수가격)</price>
+			</Buy>
+			<Sell>
+				<amount>(당일 매도금액)</amount>
+				<quantity>(당일 매도수량)</quantity>
+				<price>(당일 가중평균 매도가격)</price>
+			</Sell>
+		</ValuationCFD>
+	</TradeValuationItem>
+	<party id="DataSubmitter">
+		<partyId>(보고자ID)</partyId>
+	</party>
+	<party id="TradeParty1">
+		<partyId>(거래당사자1ID)</partyId>
+	</party>
+	<party id="TradeParty2">
+		<partyId>(거래당사자2ID)</partyId>
+		<partyIdPrefix>(거래당사자2IDPrefix)</partyIdPrefix>
+	</party>
+</KtrRequestReport>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ktrRequestReport>
+  <header>
+    <version>(버전)</version>
+    <memberId>(회원ID)</memberId>
+    <submissionDate>(제출일자)</submissionDate>
+    <messageClassificationId>(전문분류ID)</messageClassificationId>
+    <localeCode>(로케일구분코드)</localeCode>
+    <reportingMethodCode>(작성방식)</reportingMethodCode>
+    <reportingAccountNo>(보고용계좌번호)</reportingAccountNo>
+    <reportingReferenceCode>(보고참조코드)</reportingReferenceCode>
+  </header>
+  <trade>
+    <agreementDate>(계약변경일)</agreementDate>
+    <earlyTerminationDate>(조기종료일)</earlyTerminationDate>
+    <tradeHeader>
+      <partyTradeIdentifier>
+        <tradeId>(고유거래식별기호)</tradeId>
+        <originatingTradeId>(원고유거래식별기호)</originatingTradeId>
+        <linkId>(거래참조코드)</linkId>
+      </partyTradeIdentifier>
+      <partyTradeInformation>
+        <partyReference href="ReportingEntity" />
+        <reportingRegime>
+          <supervisoryRegistration>
+            <supervisorBody>KRX-TR</supervisorBody>
+          </supervisoryRegistration>
+          <reportingPurpose>T(거래정보유형)</reportingPurpose>
+          <actionType>(입력유형)</actionType>
+        </reportingRegime>
+        <relatedParty>
+          <partyReference href="ReportingEntity" />
+          <role>ReportingParty</role>
+        </relatedParty>
+        <relatedParty>
+          <partyReference href="DataSubmitter" />
+          <role>DataSubmitter</role>
+        </relatedParty>
+        <relatedParty>
+          <partyReference href="TradeParty1" />
+          <role>ContractualParty</role>
+        </relatedParty>
+        <relatedParty>
+          <partyReference href="TradeParty2" />
+          <role>Counterparty</role>
+        </relatedParty>
+        <relatedParty>
+          <partyReference href="Beneficiary" />
+          <role>Beneficiary</role>
+        </relatedParty>
+        <relatedParty>
+          <partyReference href="Broker" />
+          <role>Broker</role>
+        </relatedParty>
+        <relatedParty>
+          <partyReference href="ExecutionVenue" />
+          <role>ExecutionEntity</role>
+        </relatedParty>
+        <relatedParty>
+          <partyReference href="CCP" />
+          <role>ClearingOrganization</role>
+        </relatedParty>
+        <relatedParty>
+          <partyReference href="ClearingMember" />
+          <role>ClearingClient</role>
+        </relatedParty>
+        <category1>(고유/신탁구분)</category1>
+        <category2>(그룹내거래)</category2>
+        <category3>(본지점거래)</category3>
+        <executionVenueType>(거래플랫폼유형)</executionVenueType>
+        <confirmationMethod>(거래확인방법)</confirmationMethod>
+        <executionDateTime>(거래일시)</executionDateTime>
+        <timeStamps>
+          <confirmed>(거래확인일시)</confirmed>
+          <cleared>(청산일시)</cleared>
+        </timeStamps>
+        <intentToClear>(의무청산여부)</intentToClear>
+        <clearingIndicator>(청산여부)</clearingIndicator>
+        <collateralizationType>(담보유형)</collateralizationType>
+        <collateralPortfolioIndicator>(포트폴리오담보여부)</collateralPortfolioIndicator>
+        <collateralPortfolio>(포트폴리오담보코드1)</collateralPortfolio>
+        <collateralPortfolio2>(포트폴리오담보코드2)</collateralPortfolio2>
+        <marginRequiredForNonCCA>(비청산증거금적용대상여부)</marginRequiredForNonCCA>
+        <embeddedOptionIndicator>(내재옵션여부)</embeddedOptionIndicator>
+      </partyTradeInformation>
+      <productSummary>
+        <productCodeFSS>(금감원상품코드)</productCodeFSS>
+        <productName>(상품명)</productName>
+        <relatedProductCode>(연계상품코드)</relatedProductCode>
+        <productId>(고유상품식별기호)</productId>
+        <assetClass>(상품군)</assetClass>
+        <instrumentType>(상품유형)</instrumentType>
+        <exerciseStyle>(옵션스타일)</exerciseStyle>
+        <optionType>(옵션유형)</optionType>
+        <pricingMethod>(손익구조결정방식)</pricingMethod>
+        <notionalSchedule>(명목금액변동구분)</notionalSchedule>
+        <singleOrMultipleCurrency>(단일통화여부)</singleOrMultipleCurrency>
+        <singleOrMultipleTenor>(단일만기여부)</singleOrMultipleTenor>
+        <contractType maxOccurs="5">(기초자산/계약대분류)</contractType>
+        <contractSubType maxOccurs="5">(기초자산/계약소분류)</contractSubType>
+        <seniority>(상환우선순위)</seniority>
+        <settlementType>(결제방식)</settlementType>
+        <settlementCurrency>(결제통화)</settlementCurrency>
+      </productSummary>
+      <originatingPackage>
+        <packageIdentifier>
+          <tradeId>(복합상품연결코드)</tradeId>
+          <price>(복합상품가격)</price>
+          <priceCurrency>(복합상품가격표시통화)</priceCurrency>
+          <priceNotation>(복합상품가격표시방법)</priceNotation>
+          <spread>(복합상품스프레드)</spread>
+          <spreadCurrency>(복합상품스프레드표시통화)</spreadCurrency>
+          <spreadNotation>(복합상품스프레드표시방법)</spreadNotation>
+        </packageIdentifier>
+      </originatingPackage>
+    </tradeHeader>
+    <calculationAgent>
+      <calculationAgentParty>(계산대리인유형)</calculationAgentParty>
+      <calculationAgentReference href="CalculationAgent" />
+    </calculationAgent>
+    <documentation>
+      <contractualMatrix>
+        <matrixTerm>(표준계약서)</matrixTerm>
+      </contractualMatrix>
+      <masterAgreement>
+        <masterAgreementType>(마스터계약유형)</masterAgreementType>
+        <masterAgreementVersion>(마스터계약버전)</masterAgreementVersion>
+      </masterAgreement>
+    </documentation>
+    <additionalPayment>
+      <paymentAmount1>
+        <amount>(기타결제금액1)</amount>
+        <paymentType>(기타결제유형1)</paymentType>
+        <currency>(기타결제통화1)</currency>
+        <paymentDate>(기타결제일자1)</paymentDate>
+        <payerPartyReference href="{지급자1 PARTY ID}">(기타결제지급자1)</payerPartyReference>
+        <receiverPartyReference href="{수취자1 PARTY ID}">(기타결제수취자1)</receiverPartyReference>
+      </paymentAmount1>
+      <paymentAmount2>
+        <amount>(기타결제금액2)</amount>
+        <paymentType>(기타결제유형2)</paymentType>
+        <currency>(기타결제통화2)</currency>
+        <paymentDate>(기타결제일자2)</paymentDate>
+        <payerPartyReference href="{지급자2 PARTY ID}">(기타결제지급자2)</payerPartyReference>
+        <receiverPartyReference href="{수취자2 PARTY ID}">(기타결제수취자2)</receiverPartyReference>
+      </paymentAmount2>
+      <paymentAmount3>
+        <amount>(기타결제금액3)</amount>
+        <paymentType>(기타결제유형3)</paymentType>
+        <currency>(기타결제통화3)</currency>
+        <paymentDate>(기타결제일자3)</paymentDate>
+        <payerPartyReference href="{지급자3 PARTY ID}">(기타결제지급자3)</payerPartyReference>
+        <receiverPartyReference href="{수취자3 PARTY ID}">(기타결제수취자3)</receiverPartyReference>
+      </paymentAmount3>
+      <paymentAmount4>
+        <amount>(기타결제금액4)</amount>
+        <paymentType>(기타결제유형4)</paymentType>
+        <currency>(기타결제통화4)</currency>
+        <paymentDate>(기타결제일자4)</paymentDate>
+        <payerPartyReference href="{지급자4 PARTY ID}">(기타결제지급자4)</payerPartyReference>
+        <receiverPartyReference href="{수취자4 PARTY ID}">(기타결제수취자4)</receiverPartyReference>
+      </paymentAmount4>
+      <paymentAmount5>
+        <amount>(기타결제금액5)</amount>
+        <paymentType>(기타결제유형5)</paymentType>
+        <currency>(기타결제통화5)</currency>
+        <paymentDate>(기타결제일자5)</paymentDate>
+        <payerPartyReference href="{지급자5 PARTY ID}">(기타결제지급자5)</payerPartyReference>
+        <receiverPartyReference href="{수취자5 PARTY ID}">(기타결제수취자5)</receiverPartyReference>
+      </paymentAmount5>
+    </additionalPayment>
+    <IRSwap>
+      <swapStream1>
+        <common>
+          <payerPartyReference href="{지급자_Leg1 PARTY ID}" />
+          <effectiveDate>
+            <unadjustedDate>(효력발생일_Leg1)</unadjustedDate>
+          </effectiveDate>
+          <terminationDate>
+            <unadjustedDate>(종료일_Leg1)</unadjustedDate>
+            <dateAdjustments>
+              <businessDayConvention>(종료일영업일규칙_Leg1)</businessDayConvention>
+              <businessCenters>
+                <businessCenter maxOccurs="10">(종료일영업일적용도시_Leg1)</businessCenter>
+              </businessCenters>
+            </dateAdjustments>
+          </terminationDate>
+        </common>
+        <calculationPeriodDates>
+          <calculationPeriodDatesAdjustments>
+            <businessDayConvention>(이자계산기간종료일영업일규칙_Leg1)</businessDayConvention>
+            <businessCenters>
+              <businessCenter maxOccurs="10">(이자계산기간종료일영업일적용도시_Leg1)</businessCenter>
+            </businessCenters>
+          </calculationPeriodDatesAdjustments>
+          <firstPeriodStartDate>(이자계산기간시작일_Leg1)</firstPeriodStartDate>
+          <firstRegularPeriodStartDate>(정기이자계산기간시작일_Leg1)</firstRegularPeriodStartDate>
+          <lastRegularPeriodEndDate>(정기이자계산기간종료일_Leg1)</lastRegularPeriodEndDate>
+          <stubPeriodType maxOccurs="2">(Stub적용방식_Leg1)</stubPeriodType>
+          <calculationPeriodFrequency>
+            <periodMultiplier>(이자계산주기승수_Leg1)</periodMultiplier>
+            <period>(이자계산주기단위_Leg1)</period>
+            <rollConvention>(이자계산주기규칙_Leg1)</rollConvention>
+          </calculationPeriodFrequency>
+        </calculationPeriodDates>
+        <paymentDates>
+          <paymentFrequency>
+            <periodMultiplier>(이자지급주기승수_Leg1)</periodMultiplier>
+            <period>(이자지급주기단위_Leg1)</period>
+          </paymentFrequency>
+          <payRelativeTo>(이자지급기준일_Leg1)</payRelativeTo>
+          <paymentDaysOffset>
+            <paymentDatesOffsetDays>(이자지급일Offset_Leg1)</paymentDatesOffsetDays>
+          </paymentDaysOffset>
+          <paymentDatesAdjustments>
+            <businessDayConvention>(이자지급일영업일규칙_Leg1)</businessDayConvention>
+            <businessCenters>
+              <businessCenter maxOccurs="10">(이자지급일영업일적용도시_Leg1)</businessCenter>
+            </businessCenters>
+          </paymentDatesAdjustments>
+        </paymentDates>
+        <resetDates>
+          <resetRelativeTo>(재조정일의기준일_Leg1)</resetRelativeTo>
+          <resetCutOffDaysOffset>
+            <fixingDatesOffsetDays>(변동금리결정일Offset_Leg1)</fixingDatesOffsetDays>
+          </resetCutOffDaysOffset>
+          <resetFrequency>
+            <periodMultiplier>(변동금리재조정주기승수_Leg1)</periodMultiplier>
+            <period>(변동금리재조정주기단위_Leg1)</period>
+          </resetFrequency>
+          <resetDatesAdjustments>
+            <businessDayConvention>(변동금리결정일영업일규칙_Leg1)</businessDayConvention>
+            <businessCenters>
+              <businessCenter maxOccurs="10">(변동금리결정일영업일적용도시_Leg1)</businessCenter>
+            </businessCenters>
+          </resetDatesAdjustments>
+        </resetDates>
+        <calculationPeriodAmount>
+          <calculation>
+            <currentNotional>
+              <amount>(명목금액_Leg1)</amount>
+              <currency>(명목통화_Leg1)</currency>
+            </currentNotional>
+            <notionalSchedule>
+              <notionalStepSchedule>
+                <step>
+                  <amount maxOccurs="120">(구간명목금액_Leg1)</amount>
+                  <startDate maxOccurs="120">(구간명목금액시작일_Leg1)</startDate>
+                  <endDate maxOccurs="120">(구간명목금액종료일_Leg1)</endDate>
+                </step>
+              </notionalStepSchedule>
+            </notionalSchedule>
+            <fixedRateSchedule>
+              <rate>(고정금리_Leg1)</rate>
+              <rateNotation>(고정금리표시방법_Leg1)</rateNotation>
+            </fixedRateSchedule>
+            <floatingRateCalculation>
+              <floatingRateIndexSource maxOccurs="5">(변동금리인덱스ID출처_Leg1)</floatingRateIndexSource>
+              <floatingRateIndex maxOccurs="5">(변동금리인덱스ID_Leg1)</floatingRateIndex>
+              <floatingRateIndexCurrency maxOccurs="5">(변동금리인덱스통화_Leg1)</floatingRateIndexCurrency>
+              <indexTenor>
+                <periodMultiplier maxOccurs="5">(변동금리인덱스만기승수_Leg1)</periodMultiplier>
+                <period maxOccurs="5">(변동금리인덱스만기단위_Leg1)</period>
+              </indexTenor>
+              <floatingRateMultiplier maxOccurs="5">(변동금리레버리지승수_Leg1)</floatingRateMultiplier>
+              <spreadSchedule>
+                <spread maxOccurs="5">(변동금리스프레드_Leg1)</spread>
+                <spreadNotation maxOccurs="5">(변동금리스프레드표시방법_Leg1)</spreadNotation>
+              </spreadSchedule>
+              <averagingMethod>(변동금리평균계산법_Leg1)</averagingMethod>
+              <initialRate>(변동금리초기값_Leg1)</initialRate>
+            </floatingRateCalculation>
+            <dayCountFraction>(일수계산방식_Leg1)</dayCountFraction>
+            <discounting>
+              <discountingType>(할인적용방식_Leg1)</discountingType>
+              <discountingRate>(할인율_Leg1)</discountingRate>
+              <discountRateDayCountFraction>(할인율일수계산방식_Leg1)</discountRateDayCountFraction>
+            </discounting>
+            <compoundingMethod>(복리계산방법_Leg1)</compoundingMethod>
+          </calculation>
+        </calculationPeriodAmount>
+        <principalExchange>
+          <initialExchange>
+            <amount>(최초원금교환금액_Leg1)</amount>
+          </initialExchange>
+          <finalExchange>
+            <amount>(최종원금교환금액_Leg1)</amount>
+          </finalExchange>
+        </principalExchange>
+        <cashflows>
+          <paymentCalculationPeriod>
+            <adjustedPaymentDate maxOccurs="120">(이자지급일_Leg1)</adjustedPaymentDate>
+            <calculationPeriod>
+              <adjustedEndDate maxOccurs="120">(이자계산기간종료일_Leg1)</adjustedEndDate>
+            </calculationPeriod>
+          </paymentCalculationPeriod>
+        </cashflows>
+      </swapStream1>
+      <swapStream2>
+        <common>
+          <payerPartyReference href="(지급자_Leg2 party id)" />
+          <effectiveDate>
+            <unadjustedDate>(효력발생일_Leg2)</unadjustedDate>
+          </effectiveDate>
+          <terminationDate>
+            <unadjustedDate>(종료일_Leg2)</unadjustedDate>
+            <dateAdjustments>
+              <businessDayConvention>(종료일영업일규칙_Leg2)</businessDayConvention>
+              <businessCenters>
+                <businessCenter maxOccurs="10">(종료일영업일적용도시_Leg2)</businessCenter>
+              </businessCenters>
+            </dateAdjustments>
+          </terminationDate>
+        </common>
+        <calculationPeriodDates>
+          <calculationPeriodDatesAdjustments>
+            <businessDayConvention>(이자계산기간종료일영업일규칙_Leg2)</businessDayConvention>
+            <businessCenters>
+              <businessCenter maxOccurs="10">(이자계산기간종료일영업일적용도시_Leg2)</businessCenter>
+            </businessCenters>
+          </calculationPeriodDatesAdjustments>
+          <firstPeriodStartDate>(이자계산기간시작일_Leg2)</firstPeriodStartDate>
+          <firstRegularPeriodStartDate>(정기이자계산기간시작일_Leg2)</firstRegularPeriodStartDate>
+          <lastRegularPeriodEndDate>(정기이자계산기간종료일_Leg2)</lastRegularPeriodEndDate>
+          <stubPeriodType maxOccurs="2">(Stub적용방식_Leg2)</stubPeriodType>
+          <calculationPeriodFrequency>
+            <periodMultiplier>(이자계산주기승수_Leg2)</periodMultiplier>
+            <period>(이자계산주기단위_Leg2)</period>
+            <rollConvention>(이자계산주기규칙_Leg2)</rollConvention>
+          </calculationPeriodFrequency>
+        </calculationPeriodDates>
+        <paymentDates>
+          <paymentFrequency>
+            <periodMultiplier>(이자지급주기승수_Leg2)</periodMultiplier>
+            <period>(이자지급주기단위_Leg2)</period>
+          </paymentFrequency>
+          <payRelativeTo>(이자지급기준일_Leg2)</payRelativeTo>
+          <paymentDaysOffset>
+            <paymentDatesOffsetDays>(이자지급일Offset_Leg2)</paymentDatesOffsetDays>
+          </paymentDaysOffset>
+          <paymentDatesAdjustments>
+            <businessDayConvention>(이자지급일영업일규칙_Leg2)</businessDayConvention>
+            <businessCenters>
+              <businessCenter maxOccurs="10">(이자지급일영업일적용도시_Leg2)</businessCenter>
+            </businessCenters>
+          </paymentDatesAdjustments>
+        </paymentDates>
+        <resetDates>
+          <resetRelativeTo>(재조정일의기준일_Leg2)</resetRelativeTo>
+          <resetCutOffDaysOffset>
+            <fixingDatesOffsetDays>(변동금리결정일Offset_Leg2)</fixingDatesOffsetDays>
+          </resetCutOffDaysOffset>
+          <resetFrequency>
+            <periodMultiplier>(변동금리재조정주기승수_Leg2)</periodMultiplier>
+            <period>(변동금리재조정주기단위_Leg2)</period>
+          </resetFrequency>
+          <resetDatesAdjustments>
+            <businessDayConvention>(변동금리결정일영업일규칙_Leg2)</businessDayConvention>
+            <businessCenters>
+              <businessCenter maxOccurs="10">(변동금리결정일영업일적용도시_Leg2)</businessCenter>
+            </businessCenters>
+          </resetDatesAdjustments>
+        </resetDates>
+        <calculationPeriodAmount>
+          <calculation>
+            <currentNotional>
+              <amount>(명목금액_Leg2)</amount>
+              <currency>(명목통화_Leg2)</currency>
+            </currentNotional>
+            <notionalSchedule>
+              <notionalStepSchedule>
+                <step>
+                  <amount maxOccurs="120">(구간명목금액_Leg2)</amount>
+                  <startDate maxOccurs="120">(구간명목금액시작일_Leg2)</startDate>
+                  <endDate maxOccurs="120">(구간명목금액종료일_Leg2)</endDate>
+                </step>
+              </notionalStepSchedule>
+            </notionalSchedule>
+            <fixedRateSchedule>
+              <rate>(고정금리_Leg2)</rate>
+              <rateNotation>(고정금리표시방법_Leg2)</rateNotation>
+            </fixedRateSchedule>
+            <floatingRateCalculation>
+              <floatingRateIndexSource maxOccurs="5">(변동금리인덱스ID출처_Leg2)</floatingRateIndexSource>
+              <floatingRateIndex maxOccurs="5">(변동금리인덱스ID_Leg2)</floatingRateIndex>
+              <floatingRateIndexCurrency maxOccurs="5">(변동금리인덱스통화_Leg2)</floatingRateIndexCurrency>
+              <indexTenor>
+                <periodMultiplier maxOccurs="5">(변동금리인덱스만기승수_Leg2)</periodMultiplier>
+                <period maxOccurs="5">(변동금리인덱스만기단위_Leg2)</period>
+              </indexTenor>
+              <floatingRateMultiplier maxOccurs="5">(변동금리레버리지승수_Leg2)</floatingRateMultiplier>
+              <spreadSchedule>
+                <spread maxOccurs="5">(변동금리스프레드_Leg2)</spread>
+                <spreadNotation maxOccurs="5">(변동금리스프레드표시방법_Leg2)</spreadNotation>
+              </spreadSchedule>
+              <averagingMethod>(변동금리평균계산법_Leg2)</averagingMethod>
+              <initialRate>(변동금리초기값_Leg2)</initialRate>
+            </floatingRateCalculation>
+            <dayCountFraction>(일수계산방식_Leg2)</dayCountFraction>
+            <discounting>
+              <discountingType>(할인적용방식_Leg2)</discountingType>
+              <discountingRate>(할인율_Leg2)</discountingRate>
+              <discountRateDayCountFraction>(할인율일수계산방식_Leg2)</discountRateDayCountFraction>
+            </discounting>
+            <compoundingMethod>(복리계산방법_Leg2)</compoundingMethod>
+          </calculation>
+        </calculationPeriodAmount>
+        <principalExchange>
+          <initialExchange>
+            <amount>(최초원금교환금액_Leg2)</amount>
+          </initialExchange>
+          <finalExchange>
+            <amount>(최종원금교환금액_Leg2)</amount>
+          </finalExchange>
+        </principalExchange>
+        <cashflows>
+          <paymentCalculationPeriod>
+            <adjustedPaymentDate maxOccurs="120">(이자지급일_Leg2)</adjustedPaymentDate>
+            <calculationPeriod>
+              <adjustedEndDate maxOccurs="120">(이자계산기간종료일_Leg2)</adjustedEndDate>
+            </calculationPeriod>
+          </paymentCalculationPeriod>
+        </cashflows>
+      </swapStream2>
+      <CRS>
+        <principalExchanges>
+          <initialExchange>(최초원금교환여부)</initialExchange>
+          <intermediateExchange>(중도원금교환여부)</intermediateExchange>
+          <finalExchange>(최종원금교환여부)</finalExchange>
+          <initialPrincipalExchangeDate>(최초원금교환일)</initialPrincipalExchangeDate>
+          <varyingNotionalCurrency>(변동통화)</varyingNotionalCurrency>
+        </principalExchanges>
+      </CRS>
+      <inflation>
+        <calculationPeriodAmount>
+          <calculation>
+            <inflationRateCalculation>
+              <inflationLeg>
+                <periodMultiplier>(인플레이션결정일Lag승수)</periodMultiplier>
+                <period>(인플레이션결정일Lag단위)</period>
+              </inflationLeg>
+              <interpolationMethod>(인플레이션보간방법)</interpolationMethod>
+              <initialIndexLevel>(인플레이션지수초기값)</initialIndexLevel>
+            </inflationRateCalculation>
+          </calculation>
+        </calculationPeriodAmount>
+      </inflation>
+      <structured>
+        <principalGuaranteed>(원금보장여부)</principalGuaranteed>
+        <fundingType>(자금공여유형)</fundingType>
+      </structured>
+      <settlementProvision>
+        <nonDeliverableSettlement>
+          <settlementRateFixingDate maxOccurs="120">(결제환율결정일)</settlementRateFixingDate>
+          <settlementRateOption maxOccurs="3">(결제환율종류)</settlementRateOption>
+        </nonDeliverableSettlement>
+      </settlementProvision>
+      <underlyingAsset>
+        <nonMarketableAssetType maxOccurs="10">(비시장성자산속성)</nonMarketableAssetType>
+      </underlyingAsset>
+      <hybrid>
+        <hybridCommon>
+          <hybridProduct>(하이브리드상품 여부)</hybridProduct>
+          <secondAssetClass maxOccurs="4">(2차상품군)</secondAssetClass>
+        </hybridCommon>
+        <hybridConstituent>
+          <hybridFx>
+            <underlyingAssetIdType maxOccurs="10">(2차상품군(FX) 기초자산ID 출처유형)</underlyingAssetIdType>
+            <underlyingAssetIdSource maxOccurs="10">(2차상품군(FX) 기초자산ID 출처)</underlyingAssetIdSource>
+            <underlyingAssetId maxOccurs="10">(2차상품군(FX) 기초자산ID)</underlyingAssetId>
+          </hybridFx>
+          <hybridEquity>
+            <underlyingAssetIdType maxOccurs="10">(2차상품군(EQ) 기초자산ID 출처유형)</underlyingAssetIdType>
+            <underlyingAssetIdSource maxOccurs="10">(2차상품군(EQ) 기초자산ID 출처)</underlyingAssetIdSource>
+            <underlyingAssetId maxOccurs="10">(2차상품군(EQ) 기초자산ID)</underlyingAssetId>
+          </hybridEquity>
+          <hybridCredit>
+            <underlyingAssetIdType maxOccurs="10">(2차상품군(CR) 기초자산ID 출처유형)</underlyingAssetIdType>
+            <underlyingAssetIdSource maxOccurs="10">(2차상품군(CR) 기초자산ID 출처)</underlyingAssetIdSource>
+            <underlyingAssetId maxOccurs="10">(2차상품군(CR) 기초자산ID)</underlyingAssetId>
+          </hybridCredit>
+          <hybridCommodity>
+            <underlyingAssetIdType maxOccurs="10">(2차상품군(CO) 기초자산ID 출처유형)</underlyingAssetIdType>
+            <underlyingAssetIdSource maxOccurs="10">(2차상품군(CO) 기초자산ID 출처)</underlyingAssetIdSource>
+            <underlyingAssetId maxOccurs="10">(2차상품군(CO) 기초자산ID)</underlyingAssetId>
+          </hybridCommodity>
+        </hybridConstituent>
+      </hybrid>
+    </IRSwap>
+  </trade>
+  <party id="ReportingEntity">
+    <partyId>(보고의무자ID)</partyId>
+  </party>
+  <party id="DataSubmitter">
+    <partyId>(보고자ID)</partyId>
+  </party>
+  <party id="TradeParty1">
+    <partyId>(거래당사자1ID)</partyId>
+  </party>
+  <party id="TradeParty2">
+    <partyIdPrefix>(거래당사자2IDPrefix)</partyIdPrefix>
+    <partyId>(거래당사자2ID)</partyId>
+    <name>(거래당사자2명칭)</name>
+    <country>(거래당사자2소재지-국가)</country>
+    <contactInfo>
+      <address>
+        <postalCode>(거래당사자2소재지-우편번호)</postalCode>
+      </address>
+    </contactInfo>
+    <koreanResidency>(거래당사자2거주구분)</koreanResidency>
+  </party>
+  <party id="Beneficiary">
+    <partyIdPrefix>(수익자IDPrefix)</partyIdPrefix>
+    <partyId>(수익자ID)</partyId>
+  </party>
+  <party id="Broker">
+    <partyId>(중개회사ID)</partyId>
+  </party>
+  <party id="CalculationAgent">
+    <partyId>(계산대리인ID)</partyId>
+  </party>
+  <party id="ExecutionVenue">
+    <partyIdPrefix>(거래플랫폼IDPrefix)</partyIdPrefix>
+    <partyId>(거래플랫폼ID)</partyId>
+  </party>
+  <party id="CCP">
+    <partyId>(청산회사ID)</partyId>
+  </party>
+  <party id="ClearingMember">
+    <partyId>(청산회원ID)</partyId>
+  </party>
+</ktrRequestReport>

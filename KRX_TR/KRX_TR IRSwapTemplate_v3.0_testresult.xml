@@ -1,0 +1,128 @@
+<ktrRequestReport>
+	<header>
+		<version>(버전)</version>
+		<memberId>(회원ID)</memberId>
+		<submissionDate>(제출일자)</submissionDate>
+		<messageClassificationId>(전문분류ID)</messageClassificationId>
+		<localeCode>(로케일구분코드)</localeCode>
+		<reportingMethodCode>(작성방식)</reportingMethodCode>
+		<reportingAccountNo>(보고용계좌번호)</reportingAccountNo>
+		<reportingReferenceCode>(보고참조코드)</reportingReferenceCode>
+	</header>
+	<trade>
+		<agreementDate>(계약변경일)</agreementDate>
+		<earlyTerminationDate>(조기종료일)</earlyTerminationDate>
+		<TradeHeader>
+			<PartyTradeIdentifier>
+				<tradeId>(고유거래식별기호)</tradeId>
+				<originatingTradeId>(원고유거래식별기호)</originatingTradeId>
+				<linkId>(거래참조코드)</linkId>
+			</PartyTradeIdentifier>
+			<PartyTradeInformation>
+				<PartyReference href="ReportingEntity" />
+				<ReportingRegime>
+					<SupervisoryRegistration>
+						<supervisorBody>KRX-TR</supervisorBody>
+					</SupervisoryRegistration>
+					<reportingPurpose>T(거래정보유형)</reportingPurpose>
+					<actionType>(입력유형)</actionType>
+				</ReportingRegime>
+				<RelatedParty>
+					<PartyReference href="ClearingMember" />
+					<role>ClearingClient</role>
+				</RelatedParty>
+				<RelatedParty>
+					<PartyReference href="CCP" />
+					<role>ClearingOrganization</role>
+				</RelatedParty>
+				<RelatedParty>
+					<PartyReference href="ExecutionVenue" />
+					<role>ExecutionEntity</role>
+				</RelatedParty>
+				<RelatedParty>
+					<PartyReference href="Beneficiary" />
+					<role>Beneficiary</role>
+				</RelatedParty>
+				<RelatedParty>
+					<PartyReference href="TradeParty2" />
+					<role>Counterparty</role>
+				</RelatedParty>
+				<RelatedParty>
+					<PartyReference href="Broker" />
+					<role>Broker</role>
+				</RelatedParty>
+				<RelatedParty>
+					<PartyReference href="TradeParty1" />
+					<role>ContractualParty</role>
+				</RelatedParty>
+				<RelatedParty>
+					<PartyReference href="ReportingEntity" />
+					<role>ReportingParty</role>
+				</RelatedParty>
+				<RelatedParty>
+					<PartyReference href="DataSubmitter" />
+					<role>DataSubmitter</role>
+				</RelatedParty>
+				<category1>(고유/신탁구분)</category1>
+				<category2>(그룹내거래)</category2>
+				<category3>(본지점거래)</category3>
+				<executionVenueType>(거래플랫폼유형)</executionVenueType>
+				<confirmationMethod>(거래확인방법)</confirmationMethod>
+				<executionDateTime>(거래일시)</executionDateTime>
+				<TimeStamps>
+					<confirmed>(거래확인일시)</confirmed>
+					<cleared>(청산일시)</cleared>
+				</TimeStamps>
+				<intentToClear>(의무청산여부)</intentToClear>
+				<clearingIndicator>(청산여부)</clearingIndicator>
+				<collateralizationType>(담보유형)</collateralizationType>
+				<collateralPortfolioIndicator>(포트폴리오담보여부)</collateralPortfolioIndicator>
+				<collateralPortfolio>(포트폴리오담보코드1)</collateralPortfolio>
+				<collateralPortfolio2>(포트폴리오담보코드2)</collateralPortfolio2>
+				<marginRequiredForNonCca>(비청산증거금적용대상여부)</marginRequiredForNonCca>
+				<embeddedOptionIndicator>(내재옵션여부)</embeddedOptionIndicator>
+			</PartyTradeInformation>
+		</TradeHeader>
+	</trade>
+	<party id="ReportingEntity">
+		<partyId>(보고의무자ID)</partyId>
+	</party>
+	<party id="DataSubmitter">
+		<partyId>(보고자ID)</partyId>
+	</party>
+	<party id="TradeParty1">
+		<partyId>(거래당사자1ID)</partyId>
+	</party>
+	<party id="TradeParty2">
+		<partyId>(거래당사자2ID)</partyId>
+		<partyIdPrefix>(거래당사자2IDPrefix)</partyIdPrefix>
+		<name>(거래당사자2명칭)</name>
+		<country>(거래당사자2소재지-국가)</country>
+		<contactInfo>
+			<address>
+				<postalCode>(거래당사자2소재지-우편번호)</postalCode>
+			</address>
+		</contactInfo>
+		<koreanResidency>(거래당사자2거주구분)</koreanResidency>
+	</party>
+	<party id="Beneficiary">
+		<partyId>(수익자ID)</partyId>
+		<partyIdPrefix>(수익자IDPrefix)</partyIdPrefix>
+	</party>
+	<party id="Broker">
+		<partyId>(중개회사ID)</partyId>
+	</party>
+	<party id="CalculationAgent">
+		<partyId>(계산대리인ID)</partyId>
+	</party>
+	<party id="ExecutionVenue">
+		<partyId>ExecutionVenue</partyId>
+		<partyIdPrefix>(거래플랫폼IDPrefix)</partyIdPrefix>
+	</party>
+	<party id="CCP">
+		<partyId>(청산회사ID)</partyId>
+	</party>
+	<party id="ClearingMember">
+		<partyId>(청산회원ID)</partyId>
+	</party>
+</ktrRequestReport>
